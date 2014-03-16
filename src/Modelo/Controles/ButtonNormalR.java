@@ -6,6 +6,7 @@ package Modelo.Controles;
 
 import Modelo.Sistema.Colores;
 import Modelo.Sistema.Fuentes;
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JButton;
@@ -20,6 +21,7 @@ public class ButtonNormalR extends JButton{
     private Dimension size;
     private final Dimension defaultDimension = new Dimension(100,35);
     private final MatteBorder borde = new MatteBorder(2,2,2,2,Colores.RButtonBorder);    
+    private final Cursor manita = Cursor.getPredefinedCursor(Cursor.HAND_CURSOR);
     
     public ButtonNormalR() {
         this(null);
@@ -53,6 +55,7 @@ public class ButtonNormalR extends JButton{
         } else if (getModel().isRollover()) {
             g.setColor(Colores.RButton);
             this.setForeground(Colores.RButtonForeground);
+            this.setCursor(manita);
         }else if(!getModel().isEnabled()){
             g.setColor(Colores.WorkspaceBackground);
             this.setForeground(Colores.RButtonBorder);

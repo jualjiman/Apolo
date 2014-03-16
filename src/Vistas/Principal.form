@@ -576,9 +576,6 @@
                   </Properties>
                 </Component>
                 <Component class="Modelo.Controles.TextField" name="tfBuscarCliente">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="textField1"/>
-                  </Properties>
                 </Component>
                 <Component class="Modelo.Controles.ButtonNormalV" name="buttonNormal9">
                   <Properties>
@@ -662,21 +659,25 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="buttonNormalR2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                              <Component id="buttonNormal13" min="-2" pref="48" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="buttonNormalR3" min="-2" pref="46" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="labelIdentifier1" min="-2" pref="112" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="jScrollPane1" min="-2" pref="688" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="buttonNormalR2" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="buttonNormal13" min="-2" pref="48" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="buttonNormalR3" pref="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="buttonNormalV1" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="buttonNormalV3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="buttonNormalV4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="buttonNormalV5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="buttonNormalR1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -692,19 +693,24 @@
                       <Component id="labelIdentifier1" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jScrollPane1" min="-2" pref="367" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="314" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="buttonNormalR2" min="-2" max="-2" attributes="0"/>
+                              <Component id="buttonNormalV3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="buttonNormal13" min="-2" max="-2" attributes="0"/>
-                                  <Component id="buttonNormalR3" min="-2" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="buttonNormalV4" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="buttonNormalV1" min="-2" max="-2" attributes="0"/>
+                              <Component id="buttonNormalV5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="buttonNormalR1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="76" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="buttonNormalR2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonNormal13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="buttonNormalR3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="88" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -788,11 +794,7 @@
                                           <Component id="sCantidad" min="-2" pref="48" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="buttonNormalR1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="buttonNormal1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="buttonNormal1" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="79" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
@@ -832,10 +834,7 @@
                                           <Component id="sCantidad" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="buttonNormal1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="buttonNormalR1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="buttonNormal1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
@@ -918,12 +917,6 @@
                         <Property name="toolTipText" type="java.lang.String" value="Agregar al carrito"/>
                       </Properties>
                     </Component>
-                    <Component class="Modelo.Controles.ButtonNormalR" name="buttonNormalR1">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="6"/>
-                        <Property name="toolTipText" type="java.lang.String" value="Cancelar y limpiar"/>
-                      </Properties>
-                    </Component>
                   </SubComponents>
                 </Container>
                 <Component class="Modelo.Controles.LabelIdentifierWhite" name="labelIdentifierWhite1">
@@ -982,10 +975,28 @@
                 <Property name="toolTipText" type="java.lang.String" value="Quitar una unidad"/>
               </Properties>
             </Component>
-            <Component class="Modelo.Controles.ButtonNormalV" name="buttonNormalV1">
+            <Component class="Modelo.Controles.ButtonNormalV" name="buttonNormalV3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="k"/>
+                <Property name="toolTipText" type="java.lang.String" value="Terminar venta"/>
+              </Properties>
+            </Component>
+            <Component class="Modelo.Controles.ButtonNormalV" name="buttonNormalV4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="f"/>
                 <Property name="toolTipText" type="java.lang.String" value="Imprimir ticket"/>
+              </Properties>
+            </Component>
+            <Component class="Modelo.Controles.ButtonNormalV" name="buttonNormalV5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="c"/>
+                <Property name="toolTipText" type="java.lang.String" value="Nueva venta"/>
+              </Properties>
+            </Component>
+            <Component class="Modelo.Controles.ButtonNormalR" name="buttonNormalR1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="6"/>
+                <Property name="toolTipText" type="java.lang.String" value="Cancelar venta"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -1271,9 +1282,6 @@
                   </Properties>
                 </Component>
                 <Component class="Modelo.Controles.TextField" name="tfBuscarUsuario">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="textField1"/>
-                  </Properties>
                 </Component>
                 <Component class="Modelo.Controles.ButtonNormalV" name="buttonNormal8">
                   <Properties>

@@ -14,6 +14,8 @@ public class Colores {
     
     //BOTON DE MENU
     public static final Color MButtonPressed = new Color(27,124,179);//cuando metes el click
+    public static final Color MButtonSelected = new Color(129,182,212);//cuando metes el click
+    public static final Color MButtonHover = new Color(52,147,200);//cuando metes el click
     public static final Color MButtonBorder = new Color(27,124,179);//borde del boton
     public static final Color MButton = new Color(29,132,190);//Color por default del boton
     public static final Color MButtonForeground = new Color(235,235,235);//Color por default de fuente del boton

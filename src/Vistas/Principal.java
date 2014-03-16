@@ -113,7 +113,6 @@ public class Principal extends javax.swing.JFrame {
         labelIdentifierWhite7 = new Modelo.Controles.LabelIdentifierWhite();
         tfTotal = new Modelo.Controles.LabelTitleBig();
         buttonNormal1 = new Modelo.Controles.ButtonNormalV();
-        buttonNormalR1 = new Modelo.Controles.ButtonNormalR();
         labelIdentifierWhite1 = new Modelo.Controles.LabelIdentifierWhite();
         labelIdentifierWhite2 = new Modelo.Controles.LabelIdentifierWhite();
         labelIdentifier1 = new Modelo.Controles.LabelIdentifier();
@@ -122,7 +121,10 @@ public class Principal extends javax.swing.JFrame {
         buttonNormal13 = new Modelo.Controles.ButtonNormalV();
         buttonNormalR2 = new Modelo.Controles.ButtonNormalR();
         buttonNormalR3 = new Modelo.Controles.ButtonNormalR();
-        buttonNormalV1 = new Modelo.Controles.ButtonNormalV();
+        buttonNormalV3 = new Modelo.Controles.ButtonNormalV();
+        buttonNormalV4 = new Modelo.Controles.ButtonNormalV();
+        buttonNormalV5 = new Modelo.Controles.ButtonNormalV();
+        buttonNormalR1 = new Modelo.Controles.ButtonNormalR();
         usuarios = new javax.swing.JPanel();
         labelIdentifier7 = new Modelo.Controles.LabelIdentifier();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -420,8 +422,6 @@ public class Principal extends javax.swing.JFrame {
 
         labelTitle4.setText("CLIENTES");
 
-        tfBuscarCliente.setText("textField1");
-
         buttonNormal9.setText("g");
         buttonNormal9.setToolTipText("Buscar");
 
@@ -565,9 +565,6 @@ public class Principal extends javax.swing.JFrame {
         buttonNormal1.setText("h");
         buttonNormal1.setToolTipText("Agregar al carrito");
 
-        buttonNormalR1.setText("6");
-        buttonNormalR1.setToolTipText("Cancelar y limpiar");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -584,10 +581,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(sCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(buttonNormalR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(buttonNormal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(buttonNormal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -618,9 +612,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(comboBox2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(sCantidad))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(buttonNormal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonNormalR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(buttonNormal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelIdentifierWhite5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -694,8 +686,17 @@ public class Principal extends javax.swing.JFrame {
         buttonNormalR3.setText("i");
         buttonNormalR3.setToolTipText("Quitar una unidad");
 
-        buttonNormalV1.setText("f");
-        buttonNormalV1.setToolTipText("Imprimir ticket");
+        buttonNormalV3.setText("k");
+        buttonNormalV3.setToolTipText("Terminar venta");
+
+        buttonNormalV4.setText("f");
+        buttonNormalV4.setToolTipText("Imprimir ticket");
+
+        buttonNormalV5.setText("c");
+        buttonNormalV5.setToolTipText("Nueva venta");
+
+        buttonNormalR1.setText("6");
+        buttonNormalR1.setToolTipText("Cancelar venta");
 
         javax.swing.GroupLayout ventasLayout = new javax.swing.GroupLayout(ventas);
         ventas.setLayout(ventasLayout);
@@ -705,17 +706,21 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(ventasLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(ventasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ventasLayout.createSequentialGroup()
+                        .addComponent(buttonNormalR2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(buttonNormal13, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buttonNormalR3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(labelIdentifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ventasLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 688, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(ventasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(buttonNormalR2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(ventasLayout.createSequentialGroup()
-                                .addComponent(buttonNormal13, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(buttonNormalR3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                            .addComponent(buttonNormalV1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(ventasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(buttonNormalV3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonNormalV4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonNormalV5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(buttonNormalR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(182, Short.MAX_VALUE))
         );
         ventasLayout.setVerticalGroup(
@@ -726,16 +731,21 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(labelIdentifier1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ventasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(ventasLayout.createSequentialGroup()
-                        .addComponent(buttonNormalR2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(buttonNormalV3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(ventasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buttonNormal13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonNormalR3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(buttonNormalV4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(buttonNormalV1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 76, Short.MAX_VALUE))
+                        .addComponent(buttonNormalV5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(buttonNormalR1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(ventasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonNormalR2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonNormal13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonNormalR3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 88, Short.MAX_VALUE))
         );
 
         cards.add(ventas, "card6");
@@ -848,8 +858,6 @@ public class Principal extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(190, 219, 228));
 
         labelTitle5.setText("USUARIOS");
-
-        tfBuscarUsuario.setText("textField1");
 
         buttonNormal8.setText("g");
         buttonNormal8.setToolTipText("Buscar");
@@ -970,36 +978,43 @@ public class Principal extends javax.swing.JFrame {
     private void btMensualidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMensualidadesActionPerformed
         cardlayout.show(cards, "card4");
         this.bTitulo.setTitulo(".:" + Sistema.sysName.toUpperCase() + " - mensualidades");
+        cambiarPestaña(2);
     }//GEN-LAST:event_btMensualidadesActionPerformed
 
     private void btAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlmacenActionPerformed
         cardlayout.show(cards, "card5");
         this.bTitulo.setTitulo(".:" + Sistema.sysName.toUpperCase() + " - almacen");
+        cambiarPestaña(3);
     }//GEN-LAST:event_btAlmacenActionPerformed
 
     private void btVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btVentasActionPerformed
         cardlayout.show(cards, "card6");
         this.bTitulo.setTitulo(".:" + Sistema.sysName.toUpperCase() + " - ventas");
+        cambiarPestaña(4);
     }//GEN-LAST:event_btVentasActionPerformed
 
     private void btUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUsuariosActionPerformed
         cardlayout.show(cards, "card7");
         this.bTitulo.setTitulo(".:" + Sistema.sysName.toUpperCase() + " - usuarios");
+        cambiarPestaña(5);
     }//GEN-LAST:event_btUsuariosActionPerformed
 
     private void btHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btHomeActionPerformed
         cardlayout.show(cards, "card2");
         this.bTitulo.setTitulo(".:" + Sistema.sysName.toUpperCase() + " - home");
+        cambiarPestaña(0);
     }//GEN-LAST:event_btHomeActionPerformed
 
     private void btClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btClientesActionPerformed
         cardlayout.show(cards, "card3");
         this.bTitulo.setTitulo(".:" + Sistema.sysName.toUpperCase() + " - clientes");
+        cambiarPestaña(1);
     }//GEN-LAST:event_btClientesActionPerformed
 
     private void btConfiguracionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConfiguracionesActionPerformed
         cardlayout.show(cards, "card8");
         this.bTitulo.setTitulo(".:" + Sistema.sysName.toUpperCase() + " - configuraciones");
+        cambiarPestaña(6);
     }//GEN-LAST:event_btConfiguracionesActionPerformed
 
     private void btNuevoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNuevoClienteActionPerformed
@@ -1010,6 +1025,38 @@ public class Principal extends javax.swing.JFrame {
         new NuevoUsuario(this,true).setVisible(true);
     }//GEN-LAST:event_btNuevoUsuarioActionPerformed
 
+    private void cambiarPestaña(int p){
+        if(p == 0)
+            this.btHome.setSeleccionado(true);
+        else
+            this.btHome.setSeleccionado(false);
+        if(p == 1)
+            this.btClientes.setSeleccionado(true);
+        else
+            this.btClientes.setSeleccionado(false);
+        if(p == 2)
+            this.btMensualidades.setSeleccionado(true);
+        else
+            this.btMensualidades.setSeleccionado(false);
+        if(p == 3)
+            this.btAlmacen.setSeleccionado(true);
+        else
+            this.btAlmacen.setSeleccionado(false);
+        if(p == 4)
+            this.btVentas.setSeleccionado(true);
+        else
+            this.btVentas.setSeleccionado(false);
+        if(p == 5)
+            this.btUsuarios.setSeleccionado(true);
+        else
+            this.btUsuarios.setSeleccionado(false);
+        if(p == 6)
+            this.btConfiguraciones.setSeleccionado(true);
+        else
+            this.btConfiguraciones.setSeleccionado(false);
+        
+        
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel almacen;
     private Modelo.Controles.TitleBar bTitulo;
@@ -1035,7 +1082,9 @@ public class Principal extends javax.swing.JFrame {
     private Modelo.Controles.ButtonNormalR buttonNormalR1;
     private Modelo.Controles.ButtonNormalR buttonNormalR2;
     private Modelo.Controles.ButtonNormalR buttonNormalR3;
-    private Modelo.Controles.ButtonNormalV buttonNormalV1;
+    private Modelo.Controles.ButtonNormalV buttonNormalV3;
+    private Modelo.Controles.ButtonNormalV buttonNormalV4;
+    private Modelo.Controles.ButtonNormalV buttonNormalV5;
     private javax.swing.JPanel cards;
     private javax.swing.JPanel clientes;
     private Modelo.Controles.comboBox comboBox1;

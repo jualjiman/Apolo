@@ -6,10 +6,15 @@ package Modelo.Controles;
 
 import Modelo.Sistema.Colores;
 import Modelo.Sistema.Fuentes;
+import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
 import javax.swing.border.MatteBorder;
 
 /**
@@ -21,6 +26,12 @@ public class ButtonMenu extends JButton{
     private Dimension size;
     private final Dimension defaultDimension = new Dimension(110,70);
     private final MatteBorder borde = new MatteBorder(0,1,0,0,Colores.MButtonBorder);
+    private final Cursor manita = Cursor.getPredefinedCursor(Cursor.HAND_CURSOR);
+    
+    private final MatteBorder bordern = new MatteBorder(0,0,5,0,Colores.MButtonSelected);
+    Border bordeR = new CompoundBorder(bordern, borde);
+    
+    private boolean seleccionado = false;
     
     
     public ButtonMenu() {
@@ -60,8 +71,9 @@ public class ButtonMenu extends JButton{
 //            g.setColor(getBackground());
 //            super.setForeground(Colores.MButtonForeground);
         } else if(getModel().isRollover()) {
-            g.setColor(Colores.MButton);
+            g.setColor(Colores.MButtonHover);
             this.setForeground(Colores.MButtonForeground);
+            this.setCursor(manita);
         }else if(!getModel().isEnabled()){
             g.setColor(Colores.MButtonDisabled);
             super.setForeground(Colores.MButtonForegrounSelected);
@@ -75,5 +87,23 @@ public class ButtonMenu extends JButton{
         super.setText(this.getText().toLowerCase());
         super.setPreferredSize(size);
         super.paintComponent(g);
+    }
+
+    /**
+     * @return the seleccionado
+     */
+    public boolean isSeleccionado() {
+        return seleccionado;
+    }
+
+    /**
+     * @param seleccionado the seleccionado to set
+     */
+    public void setSeleccionado(boolean seleccionado) {
+        this.seleccionado = seleccionado;
+        if(seleccionado)
+            this.setBorder(this.bordeR);
+        else
+            this.setBorder(this.borde);
     }
 }
