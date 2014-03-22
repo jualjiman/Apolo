@@ -14,9 +14,9 @@ import java.sql.DriverManager;
 public class Conexion {
     
     public java.sql.Connection conexion;
-    private String servidor = "jdbc:mysql://localhost/SadinBD";
+    private String servidor = "jdbc:mysql://localhost/gym";
     private String usuarioDB="root";
-    private String passwordDB="123456";
+    private String passwordDB="12345";
     
     public Conexion() throws ClassNotFoundException{
         Class.forName("com.mysql.jdbc.Driver");
