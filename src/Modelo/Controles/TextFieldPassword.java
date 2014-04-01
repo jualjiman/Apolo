@@ -50,8 +50,9 @@ public class TextFieldPassword extends JPasswordField implements KeyListener{
         super.setPreferredSize(defaultDimension);
         super.setBackground(Color.white);
         super.setBorder(borde);
-        this.setFont(Fuentes.getOpenSans(15));
-        this.setForeground(Colores.Gris);
+        super.setFont(Fuentes.getOpenSans(15));
+        super.setForeground(Colores.Gris);
+        super.setEchoChar('\u2022');
         super.setText("");
     }
   

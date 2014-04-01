@@ -70,9 +70,10 @@ public class Footer extends JPanel{
 
         timeFormat = new SimpleDateFormat("hh:mm aa");
         hora = timeFormat.format(rightNow.getTime());
-        texto = "Listo";
         x++;
+        texto = "Listo";
         this.repaint();
+        
     }
     
 //    THREAD
@@ -113,7 +114,8 @@ public class Footer extends JPanel{
      */
     public void setTexto(String texto) {
         this.texto = texto;
-        redibujarBarra();
+        this.x = 0;
+        this.repaint();
     }
 
     /**

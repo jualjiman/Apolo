@@ -20,7 +20,8 @@ public class Checkbox extends JCheckBox{
         
         super.setFont(Fuentes.getVerdana(11));
         super.setBackground(Colores.WorkspaceBackground);
-        super.setForeground(Colores.GrisIntermedio);
+        super.setForeground(Colores.GrisClaro);
+        super.setFont(Fuentes.getOpenSans(15));
         inicializar();
     }
     
