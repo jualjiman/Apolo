@@ -487,7 +487,12 @@ public class Principal extends javax.swing.JFrame {
         });
 
         btMedidas.setText("l");
-        btMedidas.setToolTipText("Administrar medidas del cliente seleccionado");
+        btMedidas.setToolTipText("Progresos de cliente seleccionado");
+        btMedidas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMedidasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout clientesLayout = new javax.swing.GroupLayout(clientes);
         clientes.setLayout(clientesLayout);
@@ -523,9 +528,9 @@ public class Principal extends javax.swing.JFrame {
                         .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(clientesLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(btEliminarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btMedidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btMedidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btEliminarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(clientesLayout.createSequentialGroup()
                                 .addComponent(labelIdentifier13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1302,6 +1307,10 @@ public class Principal extends javax.swing.JFrame {
     private void btEliminarUsuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEliminarUsuario1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btEliminarUsuario1ActionPerformed
+
+    private void btMedidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMedidasActionPerformed
+       new AdministrarMedidasCliente(this,true).setVisible(true);
+    }//GEN-LAST:event_btMedidasActionPerformed
 
     private void cambiarPestaña(int p){
         if(p == 0)

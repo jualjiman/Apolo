@@ -24,101 +24,23 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tfPrecioCompra" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelIdentifier8" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tfPrecioVenta" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelIdentifier4" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="labelTitle1" min="-2" pref="252" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="labelIdentifier3" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
-                              <Component id="tfNombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelIdentifier1" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                  <Component id="tfDescripcion" alignment="1" min="-2" pref="474" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="tfAlmacen" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="labelIdentifier2" alignment="0" min="-2" pref="123" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="labelIdentifier6" min="-2" pref="123" max="-2" attributes="0"/>
-                                          <Component id="tfStock" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="btCancelar" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="btAceptar" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
+          <Component id="menuBar1" alignment="0" pref="1026" max="32767" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Component id="clientes" alignment="0" max="32767" attributes="0"/>
           </Group>
-          <Component id="menuBar1" alignment="0" pref="534" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="menuBar1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="labelTitle1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="labelIdentifier1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="tfNombre" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="labelIdentifier4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tfPrecioVenta" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="labelIdentifier8" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tfPrecioCompra" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace min="0" pref="564" max="32767" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
+                  <Component id="clientes" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="labelIdentifier2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="labelIdentifier6" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="tfAlmacen" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfStock" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Component id="labelIdentifier3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="tfDescripcion" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -132,7 +54,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="1026" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -142,88 +64,257 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="Modelo.Controles.LabelTitle" name="labelTitle1">
+    <Container class="javax.swing.JPanel" name="clientes">
       <Properties>
-        <Property name="text" type="java.lang.String" value="NUEVO ARTICULO"/>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="nombre"/>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.TextField" name="tfNombre">
-      <Properties>
-        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="tfAlmacen"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="fa" green="fa" red="fa" type="rgb"/>
         </Property>
       </Properties>
-    </Component>
-    <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier2">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="almacen"/>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.TextField" name="tfAlmacen">
-      <Properties>
-        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="tfDescripcion"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="descripci&#xf3;n"/>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.TextField" name="tfDescripcion">
-      <Properties>
-        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="tfPrecioCompra"/>
-        </Property>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="precio venta"/>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.TextField" name="tfPrecioVenta">
-    </Component>
-    <Component class="Modelo.Controles.ButtonNormalV" name="btAceptar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="5"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btAceptarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="Modelo.Controles.ButtonNormalR" name="btCancelar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="6"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCancelarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier6">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock"/>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier8">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="precio compra"/>
-      </Properties>
-    </Component>
-    <Component class="Modelo.Controles.TextField" name="tfPrecioCompra">
-    </Component>
-    <Component class="Modelo.Controles.TextField" name="tfStock">
-      <Properties>
-        <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="tfDescripcion"/>
-        </Property>
-      </Properties>
-    </Component>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="btEditarCliente1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="btSalir" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="labelSubtitle1" alignment="0" min="-2" pref="590" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="coord" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Component id="coord1" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="comboBox2" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="comboBox1" alignment="0" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="btEditarCliente" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="19" max="32767" attributes="0"/>
+                                  <Component id="imgSisMusc" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="25" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="labelTitleBig1" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="labelIdentifier1" alignment="0" min="-2" pref="310" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="labelSubtitle2" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="labelIdentifier2" alignment="1" pref="310" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Component id="labelSubtitle3" alignment="0" min="-2" pref="310" max="-2" attributes="0"/>
+                                  <Component id="labelTitle1" alignment="1" min="-2" pref="310" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <Component id="labelSubtitle1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="coord" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="comboBox1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="coord1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="comboBox2" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="btEditarCliente" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="179" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="labelTitleBig1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="labelIdentifier1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <Component id="labelSubtitle2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="labelIdentifier2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <Component id="labelSubtitle3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="labelTitle1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="imgSisMusc" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btSalir" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btEditarCliente1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="Modelo.Controles.LabelIdentifier" name="coord">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="fecha inicial"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.ButtonNormalV" name="btEditarCliente">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="m"/>
+            <Property name="toolTipText" type="java.lang.String" value="Calcular progresos"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="e4" green="db" red="be" type="rgb"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="labelTitle4" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <Component id="labelTitle4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="Modelo.Controles.LabelTitle" name="labelTitle4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="PROGRESOS DE PERENGANO DE TAL"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="Modelo.Controles.ButtonNormalR" name="btSalir">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="6"/>
+            <Property name="toolTipText" type="java.lang.String" value="Salir"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btSalirActionPerformed"/>
+          </Events>
+        </Component>
+        <Container class="Modelo.Controles.Image" name="imgSisMusc">
+          <Events>
+            <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="imgSisMuscMouseMoved"/>
+          </Events>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="330" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+        <Component class="Modelo.Controles.LabelSubtitle" name="labelSubtitle1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Criterios de comparacion"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.LabelIdentifier" name="coord1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="fecha inicial"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.comboBox" name="comboBox1">
+        </Component>
+        <Component class="Modelo.Controles.comboBox" name="comboBox2">
+        </Component>
+        <Component class="Modelo.Controles.LabelTitleBig" name="labelTitleBig1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="PIERNA DERECHA"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="20 de Enero del 2014"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.LabelSubtitle" name="labelSubtitle2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="45.48cm"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.LabelSubtitle" name="labelSubtitle3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="46.20cm"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="31 de Marzo del 2014"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.LabelTitle" name="labelTitle1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Aumento de 1.58%"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.ButtonNormalV" name="btEditarCliente1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="f"/>
+            <Property name="toolTipText" type="java.lang.String" value="Generar reporte completo"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>

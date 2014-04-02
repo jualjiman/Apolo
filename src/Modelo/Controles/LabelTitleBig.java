@@ -17,7 +17,7 @@ import javax.swing.JLabel;
 public class LabelTitleBig extends JLabel{
     
     private Dimension size;
-    private final Dimension defaultDimension = new Dimension(100,20);
+    private final Dimension defaultDimension = new Dimension(100,40);
     
     public LabelTitleBig(){
         inicializar();

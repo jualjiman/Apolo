@@ -44,7 +44,7 @@ public class dateChooser extends JDateChooser{
             this.setForeground(Colores.GrisClaro);
         else
             this.setForeground(Colores.Gris);
-        this.setFont(Fuentes.getVerdana(11));
+        this.setFont(Fuentes.getOpenSans(15));
         this.setPreferredSize(size);
         super.paintComponent(g);
     }
