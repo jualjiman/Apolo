@@ -13,7 +13,7 @@ import javax.swing.border.MatteBorder;
  *
  * @author Idea
  */
-public class AdministrarMedidasCliente extends javax.swing.JDialog {
+public class ProgresosCliente extends javax.swing.JDialog {
 
     /**
      * Creates new form NuevoUsuario
@@ -22,7 +22,7 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
     private final MatteBorder borde = new MatteBorder(1,1,1,1,Colores.MenuShadow);
     private java.awt.Image img;
     
-    public AdministrarMedidasCliente(java.awt.Frame parent, boolean modal) {
+    public ProgresosCliente(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
@@ -44,7 +44,7 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
 
         menuBar1 = new Modelo.Controles.MenuBar(this);
         clientes = new javax.swing.JPanel();
-        coord = new Modelo.Controles.LabelIdentifier();
+        lidentifier = new Modelo.Controles.LabelIdentifier();
         btEditarCliente = new Modelo.Controles.ButtonNormalV();
         jPanel3 = new javax.swing.JPanel();
         labelTitle4 = new Modelo.Controles.LabelTitle();
@@ -61,6 +61,7 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
         labelIdentifier2 = new Modelo.Controles.LabelIdentifier();
         labelTitle1 = new Modelo.Controles.LabelTitle();
         btEditarCliente1 = new Modelo.Controles.ButtonNormalV();
+        coord = new Modelo.Controles.LabelIdentifier();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -78,7 +79,7 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
 
         clientes.setBackground(new java.awt.Color(250, 250, 250));
 
-        coord.setText("fecha inicial");
+        lidentifier.setText("fecha inicial");
 
         btEditarCliente.setText("m");
         btEditarCliente.setToolTipText("Calcular progresos");
@@ -131,7 +132,7 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
 
         labelSubtitle1.setText("Criterios de comparacion");
 
-        coord1.setText("fecha inicial");
+        coord1.setText("fecha final");
 
         labelTitleBig1.setText("PIERNA DERECHA");
 
@@ -147,6 +148,9 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
 
         btEditarCliente1.setText("f");
         btEditarCliente1.setToolTipText("Generar reporte completo");
+
+        coord.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        coord.setText("fecha inicial");
 
         javax.swing.GroupLayout clientesLayout = new javax.swing.GroupLayout(clientes);
         clientes.setLayout(clientesLayout);
@@ -168,16 +172,18 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
                                 .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(clientesLayout.createSequentialGroup()
                                         .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(coord, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lidentifier, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(coord1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(110, 110, 110))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientesLayout.createSequentialGroup()
                                         .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(comboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(comboBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(clientesLayout.createSequentialGroup()
-                                                .addGap(0, 0, Short.MAX_VALUE)
-                                                .addComponent(btEditarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addComponent(coord, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(comboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(comboBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(clientesLayout.createSequentialGroup()
+                                                    .addGap(0, 0, Short.MAX_VALUE)
+                                                    .addComponent(btEditarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addGap(32, 32, 32)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                                 .addComponent(imgSisMusc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -207,7 +213,7 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
                 .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(clientesLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(coord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lidentifier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(comboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -216,7 +222,8 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
                         .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btEditarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 179, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                        .addComponent(coord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(clientesLayout.createSequentialGroup()
                         .addGap(17, 17, 17)
                         .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,12 +240,12 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
                                 .addGap(18, 18, 18)
                                 .addComponent(labelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(imgSisMusc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                            .addComponent(imgSisMusc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btEditarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30))
+                .addGap(46, 46, 46))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -264,9 +271,7 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalirActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        this.dispose();
+        MetodosVentana.CerrarVentana(this);
     }//GEN-LAST:event_btSalirActionPerformed
 
     private void imgSisMuscMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgSisMuscMouseMoved
@@ -275,6 +280,10 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
         float y = evt.getY();
         this.coord.setText("(X:" + x + ")(Y:" + y + ")");
     }//GEN-LAST:event_imgSisMuscMouseMoved
+    
+    private void inicializar(){
+        
+    }
     /*
     private void inicializar(){
         this.tfNombre.setPlaceholder("¿Cual es el nombre del articulo?");
@@ -336,6 +345,7 @@ public class AdministrarMedidasCliente extends javax.swing.JDialog {
     private Modelo.Controles.LabelTitle labelTitle1;
     private Modelo.Controles.LabelTitle labelTitle4;
     private Modelo.Controles.LabelTitleBig labelTitleBig1;
+    private Modelo.Controles.LabelIdentifier lidentifier;
     private Modelo.Controles.MenuBar menuBar1;
     // End of variables declaration//GEN-END:variables
 }

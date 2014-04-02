@@ -85,6 +85,7 @@ public class NuevoArticulo extends javax.swing.JDialog {
         labelIdentifier4.setText("precio venta");
 
         btAceptar.setText("5");
+        btAceptar.setToolTipText("Aceptar");
         btAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btAceptarActionPerformed(evt);
@@ -92,6 +93,7 @@ public class NuevoArticulo extends javax.swing.JDialog {
         });
 
         btCancelar.setText("6");
+        btCancelar.setToolTipText("Cancelar y salir");
         btCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btCancelarActionPerformed(evt);

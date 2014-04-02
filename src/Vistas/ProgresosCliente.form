@@ -91,18 +91,21 @@
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="coord" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Component id="lidentifier" min="-2" pref="150" max="-2" attributes="0"/>
                                               <Component id="coord1" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="comboBox2" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="comboBox1" alignment="0" max="32767" attributes="0"/>
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                  <Component id="btEditarCliente" min="-2" max="-2" attributes="0"/>
+                                              <Component id="coord" min="-2" pref="150" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="comboBox2" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="comboBox1" alignment="0" max="32767" attributes="0"/>
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                      <Component id="btEditarCliente" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
@@ -148,7 +151,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="coord" min="-2" max="-2" attributes="0"/>
+                          <Component id="lidentifier" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="comboBox1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -157,9 +160,10 @@
                           <Component id="comboBox2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btEditarCliente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="179" max="32767" attributes="0"/>
+                          <EmptySpace pref="143" max="32767" attributes="0"/>
+                          <Component id="coord" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
@@ -178,20 +182,20 @@
                               </Group>
                               <Component id="imgSisMusc" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btSalir" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btEditarCliente1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="Modelo.Controles.LabelIdentifier" name="coord">
+        <Component class="Modelo.Controles.LabelIdentifier" name="lidentifier">
           <Properties>
             <Property name="text" type="java.lang.String" value="fecha inicial"/>
           </Properties>
@@ -271,7 +275,7 @@
         </Component>
         <Component class="Modelo.Controles.LabelIdentifier" name="coord1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="fecha inicial"/>
+            <Property name="text" type="java.lang.String" value="fecha final"/>
           </Properties>
         </Component>
         <Component class="Modelo.Controles.comboBox" name="comboBox1">
@@ -312,6 +316,12 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="f"/>
             <Property name="toolTipText" type="java.lang.String" value="Generar reporte completo"/>
+          </Properties>
+        </Component>
+        <Component class="Modelo.Controles.LabelIdentifier" name="coord">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="4"/>
+            <Property name="text" type="java.lang.String" value="fecha inicial"/>
           </Properties>
         </Component>
       </SubComponents>

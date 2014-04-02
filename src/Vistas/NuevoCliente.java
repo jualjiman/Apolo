@@ -72,22 +72,18 @@ public class NuevoCliente extends javax.swing.JDialog {
 
         labelIdentifier1.setText("Nombre");
 
-        tfNombre.setText("textField1");
         tfNombre.setNextFocusableComponent(tfAp);
 
         labelIdentifier2.setText("Apellido paterno");
 
-        tfAp.setText("textField1");
         tfAp.setNextFocusableComponent(tfAm);
 
         labelIdentifier3.setText("Apellido materno");
 
-        tfAm.setText("textField1");
         tfAm.setNextFocusableComponent(tfTelefono);
 
         labelIdentifier4.setText("Telefono");
 
-        tfTelefono.setText("textField1");
         tfTelefono.setNextFocusableComponent(cbTipo);
 
         labelIdentifier5.setText("Tipo");
@@ -96,6 +92,7 @@ public class NuevoCliente extends javax.swing.JDialog {
         cbTipo.setNextFocusableComponent(chbActivo);
 
         btAceptar.setText("5");
+        btAceptar.setToolTipText("Aceptar");
         btAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btAceptarActionPerformed(evt);
@@ -121,6 +118,7 @@ public class NuevoCliente extends javax.swing.JDialog {
         chbActivo.setNextFocusableComponent(btAceptar);
 
         btCancelar.setText("6");
+        btCancelar.setToolTipText("Cancelar y salir");
         btCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btCancelarActionPerformed(evt);

@@ -12,6 +12,7 @@ import com.toedter.calendar.JDateChooser;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.util.Date;
 import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
@@ -35,6 +36,10 @@ public class dateChooser extends JDateChooser{
     private void inicializar(){
         super.setPreferredSize(defaultDimension);
         super.setBackground(Color.white);
+        Date hoy = new Date();
+        super.setDate(hoy);
+        super.setForeground(Colores.Gris);
+        super.setFont(Fuentes.getOpenSans(15));
     }
   
     @Override
@@ -44,7 +49,7 @@ public class dateChooser extends JDateChooser{
             this.setForeground(Colores.GrisClaro);
         else
             this.setForeground(Colores.Gris);
-        this.setFont(Fuentes.getOpenSans(15));
+        
         this.setPreferredSize(size);
         super.paintComponent(g);
     }

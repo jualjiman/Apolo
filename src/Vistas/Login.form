@@ -61,12 +61,12 @@
               <Component id="labelIdentifier2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="tfPassword" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="46" max="32767" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -124,9 +124,6 @@
       </Events>
     </Component>
     <Component class="Modelo.Controles.TextFieldPassword" name="tfPassword">
-      <Properties>
-        <Property name="echoChar" type="char" value="&#x2022;"/>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -57,7 +57,7 @@ public class TextField extends JTextField implements KeyListener, FocusListener,
         super.setPreferredSize(defaultDimension);
         super.setBackground(Color.white);
         super.setBorder(borde);
-        this.setFont(Fuentes.getOpenSans(15));
+        super.setFont(Fuentes.getOpenSans(15));
         super.setText(placeholder);
     }
   
@@ -154,6 +154,7 @@ public class TextField extends JTextField implements KeyListener, FocusListener,
      */
     
     public void setPlaceholder(String placeholder) {
+        this.inactivo = true;
         this.placeholder = placeholder;
         this.setText(placeholder);
     }

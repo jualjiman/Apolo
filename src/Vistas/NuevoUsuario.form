@@ -199,7 +199,6 @@
     </Component>
     <Component class="Modelo.Controles.TextField" name="tfNombre">
       <Properties>
-        <Property name="text" type="java.lang.String" value="textField1"/>
         <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="tfAp"/>
         </Property>
@@ -212,7 +211,6 @@
     </Component>
     <Component class="Modelo.Controles.TextField" name="tfAp">
       <Properties>
-        <Property name="text" type="java.lang.String" value="textField1"/>
         <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="tfAm"/>
         </Property>
@@ -225,7 +223,6 @@
     </Component>
     <Component class="Modelo.Controles.TextField" name="tfAm">
       <Properties>
-        <Property name="text" type="java.lang.String" value="textField1"/>
         <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="tfUsuario"/>
         </Property>
@@ -238,7 +235,6 @@
     </Component>
     <Component class="Modelo.Controles.TextField" name="tfTelefono">
       <Properties>
-        <Property name="text" type="java.lang.String" value="textField1"/>
         <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="cbTipo"/>
         </Property>
@@ -266,6 +262,7 @@
     <Component class="Modelo.Controles.ButtonNormalV" name="btAceptar">
       <Properties>
         <Property name="text" type="java.lang.String" value="5"/>
+        <Property name="toolTipText" type="java.lang.String" value="Aceptar"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btAceptarActionPerformed"/>
@@ -282,6 +279,7 @@
     <Component class="Modelo.Controles.ButtonNormalR" name="btCancelar">
       <Properties>
         <Property name="text" type="java.lang.String" value="6"/>
+        <Property name="toolTipText" type="java.lang.String" value="Cancelar y salir"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCancelarActionPerformed"/>
@@ -318,7 +316,6 @@
     </Component>
     <Component class="Modelo.Controles.TextField" name="tfUsuario">
       <Properties>
-        <Property name="text" type="java.lang.String" value="textField1"/>
         <Property name="nextFocusableComponent" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
           <ComponentRef name="pfContrase&#xf1;a"/>
         </Property>

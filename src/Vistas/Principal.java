@@ -97,7 +97,8 @@ public class Principal extends javax.swing.JFrame {
         tfBuscarCliente = new Modelo.Controles.TextField();
         buttonNormal9 = new Modelo.Controles.ButtonNormalV();
         btEliminarCliente = new Modelo.Controles.ButtonNormalR();
-        btMedidas = new Modelo.Controles.ButtonNormalV();
+        btProg = new Modelo.Controles.ButtonNormalV();
+        btAdmProg = new Modelo.Controles.ButtonNormalV();
         mensualidades = new javax.swing.JPanel();
         almacen = new javax.swing.JPanel();
         usuarios1 = new javax.swing.JPanel();
@@ -327,7 +328,7 @@ public class Principal extends javax.swing.JFrame {
 
         clientes.setBackground(new java.awt.Color(250, 250, 250));
 
-        labelIdentifier13.setText("Actualmente registrados");
+        labelIdentifier13.setText("actualmente registrados");
 
         table3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -486,11 +487,19 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        btMedidas.setText("l");
-        btMedidas.setToolTipText("Progresos de cliente seleccionado");
-        btMedidas.addActionListener(new java.awt.event.ActionListener() {
+        btProg.setText("m");
+        btProg.setToolTipText("Progresos de cliente seleccionado");
+        btProg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btMedidasActionPerformed(evt);
+                btProgActionPerformed(evt);
+            }
+        });
+
+        btAdmProg.setText("l");
+        btAdmProg.setToolTipText("Administrar progresos de cliente");
+        btAdmProg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAdmProgActionPerformed(evt);
             }
         });
 
@@ -512,7 +521,9 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btEliminarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btMedidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btAdmProg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btProg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(panel3, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
                 .addContainerGap())
@@ -529,7 +540,9 @@ public class Principal extends javax.swing.JFrame {
                             .addGroup(clientesLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btMedidas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(btProg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btAdmProg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(btEliminarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(clientesLayout.createSequentialGroup()
                                 .addComponent(labelIdentifier13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -566,7 +579,7 @@ public class Principal extends javax.swing.JFrame {
 
         usuarios1.setBackground(new java.awt.Color(250, 250, 250));
 
-        labelIdentifier19.setText("Actualmente registrados");
+        labelIdentifier19.setText("actualmente registrados");
 
         table4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -920,7 +933,7 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        labelIdentifier1.setText("Carrito de compras");
+        labelIdentifier1.setText("carrito de compras");
 
         table1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1010,7 +1023,7 @@ public class Principal extends javax.swing.JFrame {
 
         usuarios.setBackground(new java.awt.Color(250, 250, 250));
 
-        labelIdentifier7.setText("Actualmente registrados");
+        labelIdentifier7.setText("actualmente registrados");
 
         table2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1145,7 +1158,7 @@ public class Principal extends javax.swing.JFrame {
         );
 
         btEliminarUsuario.setText("b");
-        btEliminarUsuario.setToolTipText(" usuario");
+        btEliminarUsuario.setToolTipText("Eliminar usuario");
         btEliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btEliminarUsuarioActionPerformed(evt);
@@ -1308,9 +1321,13 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btEliminarUsuario1ActionPerformed
 
-    private void btMedidasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMedidasActionPerformed
-       new AdministrarMedidasCliente(this,true).setVisible(true);
-    }//GEN-LAST:event_btMedidasActionPerformed
+    private void btProgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btProgActionPerformed
+       new ProgresosCliente(this,true).setVisible(true);
+    }//GEN-LAST:event_btProgActionPerformed
+
+    private void btAdmProgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAdmProgActionPerformed
+        new AdmProgresos(this,true).setVisible(true);
+    }//GEN-LAST:event_btAdmProgActionPerformed
 
     private void cambiarPestaña(int p){
         if(p == 0)
@@ -1347,6 +1364,7 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel almacen;
     private Modelo.Controles.TitleBar bTitulo;
+    private Modelo.Controles.ButtonNormalV btAdmProg;
     private Modelo.Controles.ButtonNormalV btAgregarArt;
     private Modelo.Controles.ButtonMenu btAlmacen;
     private Modelo.Controles.ButtonNormalV btAumentarArt;
@@ -1364,13 +1382,13 @@ public class Principal extends javax.swing.JFrame {
     private Modelo.Controles.ButtonNormalR btEliminarUsuario1;
     private Modelo.Controles.ButtonMenu btHome;
     private Modelo.Controles.ButtonNormalV btImprimirTiquet;
-    private Modelo.Controles.ButtonNormalV btMedidas;
     private Modelo.Controles.ButtonMenu btMensualidades;
     private Modelo.Controles.ButtonAdmWindow btMin;
     private Modelo.Controles.ButtonNormalV btNuevaVenta;
     private Modelo.Controles.ButtonNormalV btNuevoArticulo;
     private Modelo.Controles.ButtonNormalV btNuevoCliente;
     private Modelo.Controles.ButtonNormalV btNuevoUsuario;
+    private Modelo.Controles.ButtonNormalV btProg;
     private Modelo.Controles.ButtonNormalR btQuitarArt;
     private Modelo.Controles.ButtonNormalV btTerminarVenta;
     private Modelo.Controles.ButtonMenu btUsuarios;

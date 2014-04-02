@@ -297,7 +297,9 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="btEliminarCliente" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
-                              <Component id="btMedidas" min="-2" max="-2" attributes="0"/>
+                              <Component id="btAdmProg" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="btProg" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -318,7 +320,10 @@
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="btMedidas" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                              <Component id="btProg" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btAdmProg" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                           <Component id="btEliminarCliente" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -347,7 +352,7 @@
           <SubComponents>
             <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier13">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Actualmente registrados"/>
+                <Property name="text" type="java.lang.String" value="actualmente registrados"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -597,13 +602,22 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEliminarClienteActionPerformed"/>
               </Events>
             </Component>
-            <Component class="Modelo.Controles.ButtonNormalV" name="btMedidas">
+            <Component class="Modelo.Controles.ButtonNormalV" name="btProg">
               <Properties>
-                <Property name="text" type="java.lang.String" value="l"/>
+                <Property name="text" type="java.lang.String" value="m"/>
                 <Property name="toolTipText" type="java.lang.String" value="Progresos de cliente seleccionado"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btMedidasActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btProgActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="Modelo.Controles.ButtonNormalV" name="btAdmProg">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="l"/>
+                <Property name="toolTipText" type="java.lang.String" value="Administrar progresos de cliente"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btAdmProgActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -731,7 +745,7 @@
               <SubComponents>
                 <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier19">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Actualmente registrados"/>
+                    <Property name="text" type="java.lang.String" value="actualmente registrados"/>
                   </Properties>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane4">
@@ -1284,7 +1298,7 @@
             </Container>
             <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Carrito de compras"/>
+                <Property name="text" type="java.lang.String" value="carrito de compras"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -1424,7 +1438,7 @@
           <SubComponents>
             <Component class="Modelo.Controles.LabelIdentifier" name="labelIdentifier7">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Actualmente registrados"/>
+                <Property name="text" type="java.lang.String" value="actualmente registrados"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -1645,7 +1659,7 @@
             <Component class="Modelo.Controles.ButtonNormalR" name="btEliminarUsuario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="b"/>
-                <Property name="toolTipText" type="java.lang.String" value=" usuario"/>
+                <Property name="toolTipText" type="java.lang.String" value="Eliminar usuario"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEliminarUsuarioActionPerformed"/>
