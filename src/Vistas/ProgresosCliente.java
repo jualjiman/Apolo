@@ -6,6 +6,10 @@ package Vistas;
 
 import Modelo.Sistema.Colores;
 import Modelo.Sistema.MetodosVentana;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import javax.swing.JOptionPane;
 import javax.swing.border.MatteBorder;
 
@@ -20,7 +24,7 @@ public class ProgresosCliente extends javax.swing.JDialog {
      */
  
     private final MatteBorder borde = new MatteBorder(1,1,1,1,Colores.MenuShadow);
-    private java.awt.Image img;
+    private final Graphics go;
     
     public ProgresosCliente(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -28,9 +32,9 @@ public class ProgresosCliente extends javax.swing.JDialog {
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground( Colores.WorkspaceBackground );
         this.getRootPane().setBorder(borde);
+        go = graphicMuscSys1.getGraphics();
        //inicializar();
-        img= new javax.swing.ImageIcon(getClass().getResource("/Images/assets/smM.png")).getImage();
-        imgSisMusc.setImagen(img);
+        
     }
 
     /**
@@ -45,11 +49,10 @@ public class ProgresosCliente extends javax.swing.JDialog {
         menuBar1 = new Modelo.Controles.MenuBar(this);
         clientes = new javax.swing.JPanel();
         lidentifier = new Modelo.Controles.LabelIdentifier();
-        btEditarCliente = new Modelo.Controles.ButtonNormalV();
+        btCalcular = new Modelo.Controles.ButtonNormalV();
         jPanel3 = new javax.swing.JPanel();
         labelTitle4 = new Modelo.Controles.LabelTitle();
         btSalir = new Modelo.Controles.ButtonNormalR();
-        imgSisMusc = new Modelo.Controles.Image();
         labelSubtitle1 = new Modelo.Controles.LabelSubtitle();
         coord1 = new Modelo.Controles.LabelIdentifier();
         comboBox1 = new Modelo.Controles.comboBox();
@@ -60,8 +63,9 @@ public class ProgresosCliente extends javax.swing.JDialog {
         labelSubtitle3 = new Modelo.Controles.LabelSubtitle();
         labelIdentifier2 = new Modelo.Controles.LabelIdentifier();
         labelTitle1 = new Modelo.Controles.LabelTitle();
-        btEditarCliente1 = new Modelo.Controles.ButtonNormalV();
+        btGenerarReporte = new Modelo.Controles.ButtonNormalV();
         coord = new Modelo.Controles.LabelIdentifier();
+        graphicMuscSys1 = new Modelo.Controles.GraphicMuscSys();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
@@ -81,8 +85,8 @@ public class ProgresosCliente extends javax.swing.JDialog {
 
         lidentifier.setText("fecha inicial");
 
-        btEditarCliente.setText("m");
-        btEditarCliente.setToolTipText("Calcular progresos");
+        btCalcular.setText("m");
+        btCalcular.setToolTipText("Calcular progresos");
 
         jPanel3.setBackground(new java.awt.Color(190, 219, 228));
 
@@ -113,23 +117,6 @@ public class ProgresosCliente extends javax.swing.JDialog {
             }
         });
 
-        imgSisMusc.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                imgSisMuscMouseMoved(evt);
-            }
-        });
-
-        javax.swing.GroupLayout imgSisMuscLayout = new javax.swing.GroupLayout(imgSisMusc);
-        imgSisMusc.setLayout(imgSisMuscLayout);
-        imgSisMuscLayout.setHorizontalGroup(
-            imgSisMuscLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
-        imgSisMuscLayout.setVerticalGroup(
-            imgSisMuscLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
         labelSubtitle1.setText("Criterios de comparacion");
 
         coord1.setText("fecha final");
@@ -146,11 +133,33 @@ public class ProgresosCliente extends javax.swing.JDialog {
 
         labelTitle1.setText("Aumento de 1.58%");
 
-        btEditarCliente1.setText("f");
-        btEditarCliente1.setToolTipText("Generar reporte completo");
+        btGenerarReporte.setText("f");
+        btGenerarReporte.setToolTipText("Generar reporte completo");
+        btGenerarReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGenerarReporteActionPerformed(evt);
+            }
+        });
 
         coord.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        coord.setText("fecha inicial");
+        coord.setText("coordenadas");
+
+        graphicMuscSys1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                graphicMuscSys1MouseMoved(evt);
+            }
+        });
+
+        javax.swing.GroupLayout graphicMuscSys1Layout = new javax.swing.GroupLayout(graphicMuscSys1);
+        graphicMuscSys1.setLayout(graphicMuscSys1Layout);
+        graphicMuscSys1Layout.setHorizontalGroup(
+            graphicMuscSys1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 313, Short.MAX_VALUE)
+        );
+        graphicMuscSys1Layout.setVerticalGroup(
+            graphicMuscSys1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout clientesLayout = new javax.swing.GroupLayout(clientes);
         clientes.setLayout(clientesLayout);
@@ -162,32 +171,24 @@ public class ProgresosCliente extends javax.swing.JDialog {
                 .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(clientesLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btEditarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btGenerarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(clientesLayout.createSequentialGroup()
-                        .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelSubtitle1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, clientesLayout.createSequentialGroup()
-                                .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(clientesLayout.createSequentialGroup()
-                                        .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lidentifier, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(coord1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(110, 110, 110))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientesLayout.createSequentialGroup()
-                                        .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(coord, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(comboBox2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(comboBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addGroup(clientesLayout.createSequentialGroup()
-                                                    .addGap(0, 0, Short.MAX_VALUE)
-                                                    .addComponent(btEditarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGap(32, 32, 32)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                                .addComponent(imgSisMusc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(clientesLayout.createSequentialGroup()
+                                .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lidentifier, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(coord1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(comboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(coord, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(graphicMuscSys1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(labelSubtitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                         .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(labelTitleBig1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -212,22 +213,20 @@ public class ProgresosCliente extends javax.swing.JDialog {
                 .addComponent(labelSubtitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(clientesLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(lidentifier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(coord1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btEditarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
-                        .addComponent(coord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(clientesLayout.createSequentialGroup()
-                        .addGap(17, 17, 17)
                         .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(clientesLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(lidentifier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(comboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(coord1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(comboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(clientesLayout.createSequentialGroup()
+                                .addGap(17, 17, 17)
                                 .addComponent(labelTitleBig1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(labelIdentifier1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -237,15 +236,21 @@ public class ProgresosCliente extends javax.swing.JDialog {
                                 .addComponent(labelIdentifier2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(6, 6, 6)
                                 .addComponent(labelSubtitle3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(labelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(imgSisMusc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btEditarCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46))
+                                .addGap(33, 33, 33)
+                                .addComponent(labelTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
+                        .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btSalir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btGenerarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(46, 46, 46))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clientesLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(clientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(graphicMuscSys1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, clientesLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(coord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(88, 88, 88))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -263,7 +268,7 @@ public class ProgresosCliente extends javax.swing.JDialog {
                 .addGap(0, 564, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 75, Short.MAX_VALUE)
+                    .addGap(0, 67, Short.MAX_VALUE)
                     .addComponent(clientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -274,12 +279,30 @@ public class ProgresosCliente extends javax.swing.JDialog {
         MetodosVentana.CerrarVentana(this);
     }//GEN-LAST:event_btSalirActionPerformed
 
-    private void imgSisMuscMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imgSisMuscMouseMoved
+    private void btGenerarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGenerarReporteActionPerformed
         // TODO add your handling code here:
-        float x = evt.getX();
-        float y = evt.getY();
+        this.graphicMuscSys1.setSexo(1);
+    }//GEN-LAST:event_btGenerarReporteActionPerformed
+
+    private void graphicMuscSys1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_graphicMuscSys1MouseMoved
+        int x = evt.getX();
+        int y = evt.getY();
+
         this.coord.setText("(X:" + x + ")(Y:" + y + ")");
-    }//GEN-LAST:event_imgSisMuscMouseMoved
+//        
+//            Graphics2D g2d = (Graphics2D) go;
+//            RenderingHints rh =
+//                new RenderingHints(RenderingHints.KEY_ANTIALIASING, 
+//                RenderingHints.VALUE_ANTIALIAS_ON);
+//
+//            rh.put(RenderingHints.KEY_RENDERING,
+//                   RenderingHints.VALUE_RENDER_QUALITY);
+//
+//            g2d.setRenderingHints(rh);
+//            g2d.setColor(Colores.NButton);
+//            g2d.fillOval(evt.getX(),evt.getY(),10,10);
+            
+    }//GEN-LAST:event_graphicMuscSys1MouseMoved
     
     private void inicializar(){
         
@@ -327,15 +350,15 @@ public class ProgresosCliente extends javax.swing.JDialog {
     */
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Modelo.Controles.ButtonNormalV btEditarCliente;
-    private Modelo.Controles.ButtonNormalV btEditarCliente1;
+    private Modelo.Controles.ButtonNormalV btCalcular;
+    private Modelo.Controles.ButtonNormalV btGenerarReporte;
     private Modelo.Controles.ButtonNormalR btSalir;
     private javax.swing.JPanel clientes;
     private Modelo.Controles.comboBox comboBox1;
     private Modelo.Controles.comboBox comboBox2;
     private Modelo.Controles.LabelIdentifier coord;
     private Modelo.Controles.LabelIdentifier coord1;
-    private Modelo.Controles.Image imgSisMusc;
+    private Modelo.Controles.GraphicMuscSys graphicMuscSys1;
     private javax.swing.JPanel jPanel3;
     private Modelo.Controles.LabelIdentifier labelIdentifier1;
     private Modelo.Controles.LabelIdentifier labelIdentifier2;

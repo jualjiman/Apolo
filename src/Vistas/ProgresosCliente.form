@@ -38,7 +38,7 @@
           </Group>
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="0" pref="75" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="67" max="32767" attributes="0"/>
                   <Component id="clientes" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -80,42 +80,29 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="btEditarCliente1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btGenerarReporte" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="btSalir" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="labelSubtitle1" alignment="0" min="-2" pref="590" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="lidentifier" min="-2" pref="150" max="-2" attributes="0"/>
-                                              <Component id="coord1" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="comboBox2" alignment="1" min="-2" pref="228" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lidentifier" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="coord1" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="comboBox1" alignment="0" min="-2" pref="228" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="coord" min="-2" pref="150" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="comboBox2" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="comboBox1" alignment="0" max="32767" attributes="0"/>
-                                                  <Group type="102" attributes="0">
-                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                      <Component id="btEditarCliente" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="btCalcular" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="coord" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="19" max="32767" attributes="0"/>
-                                  <Component id="imgSisMusc" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="graphicMuscSys1" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="labelSubtitle1" min="-2" pref="590" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="25" max="32767" attributes="0"/>
+                          <EmptySpace pref="44" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Component id="labelTitleBig1" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
@@ -149,24 +136,22 @@
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="labelSubtitle1" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="lidentifier" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="comboBox1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="coord1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="comboBox2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btEditarCliente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="143" max="32767" attributes="0"/>
-                          <Component id="coord" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="lidentifier" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="comboBox1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="coord1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="comboBox2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="btCalcular" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                   <Component id="labelTitleBig1" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="labelIdentifier1" min="-2" max="-2" attributes="0"/>
@@ -176,20 +161,29 @@
                                   <Component id="labelIdentifier2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                                   <Component id="labelSubtitle3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                   <Component id="labelTitle1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="imgSisMusc" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace pref="163" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btSalir" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btGenerarReporte" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="graphicMuscSys1" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="coord" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btSalir" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btEditarCliente1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -200,7 +194,7 @@
             <Property name="text" type="java.lang.String" value="fecha inicial"/>
           </Properties>
         </Component>
-        <Component class="Modelo.Controles.ButtonNormalV" name="btEditarCliente">
+        <Component class="Modelo.Controles.ButtonNormalV" name="btCalcular">
           <Properties>
             <Property name="text" type="java.lang.String" value="m"/>
             <Property name="toolTipText" type="java.lang.String" value="Calcular progresos"/>
@@ -250,24 +244,6 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btSalirActionPerformed"/>
           </Events>
         </Component>
-        <Container class="Modelo.Controles.Image" name="imgSisMusc">
-          <Events>
-            <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="imgSisMuscMouseMoved"/>
-          </Events>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="330" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
         <Component class="Modelo.Controles.LabelSubtitle" name="labelSubtitle1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Criterios de comparacion"/>
@@ -312,18 +288,39 @@
             <Property name="text" type="java.lang.String" value="Aumento de 1.58%"/>
           </Properties>
         </Component>
-        <Component class="Modelo.Controles.ButtonNormalV" name="btEditarCliente1">
+        <Component class="Modelo.Controles.ButtonNormalV" name="btGenerarReporte">
           <Properties>
             <Property name="text" type="java.lang.String" value="f"/>
             <Property name="toolTipText" type="java.lang.String" value="Generar reporte completo"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btGenerarReporteActionPerformed"/>
+          </Events>
         </Component>
         <Component class="Modelo.Controles.LabelIdentifier" name="coord">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="4"/>
-            <Property name="text" type="java.lang.String" value="fecha inicial"/>
+            <Property name="text" type="java.lang.String" value="coordenadas"/>
           </Properties>
         </Component>
+        <Container class="Modelo.Controles.GraphicMuscSys" name="graphicMuscSys1">
+          <Events>
+            <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="graphicMuscSys1MouseMoved"/>
+          </Events>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="313" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
       </SubComponents>
     </Container>
   </SubComponents>
